@@ -60,6 +60,7 @@
     <Compile Include="SnakeHeadPart.cs" />
     <Compile Include="SnakePart.cs" />
     <Compile Include="SnakeTailPart.cs" />
+    <Compile Include="Rebbit.cs" />
     <EmbeddedResource Include="SnakeForm.resx">
       <DependentUpon>SnakeForm.cs</DependentUpon>
     </EmbeddedResource>

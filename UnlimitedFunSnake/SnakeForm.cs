@@ -19,18 +19,20 @@ namespace UnlimitedFunSnake
         public Graphics Gfx;
         public Stopwatch Stopwatch;
         public Dictionary<Keys, bool> KeyboardDic;
+        public Keys TmpPressedKey;
 
         public SnakeForm()
         {
             InitializeComponent();
-            this.ClientSize = new Size(800, 500);
-            var bmp = new Bitmap(800, 500);
+            this.ClientSize = new Size(800, 496);
+            var bmp = new Bitmap(800, 496);
             snakePictureBox.Image = bmp;
             Gfx = Graphics.FromImage(bmp);
             UpdatableList = new List<IUpdatable>();
             DrawableList = new List<IDrawable>();
             KeyboardList = new List<IKeyboardDependers>();
             KeyboardDic = new Dictionary<Keys, bool>();
+            TmpPressedKey = Keys.Right;
 
             //Gfx.FillRectangle(new SolidBrush(Color.Red), 100, 100, 100, 100);
             var timer = new Timer();
@@ -53,21 +55,20 @@ namespace UnlimitedFunSnake
             DrawableList.Add(snake);
             KeyboardList.Add(snake);
 
-            this.KeyUp += Keyboard;
-            this.KeyUp += DictionaryUp;
-
+            this.KeyDown += Keyboard;
             this.KeyDown += DictionaryDown;
+
+            this.KeyUp += DictionaryUp;
 
 
             Stopwatch = new Stopwatch();
         }
         public void Update(object t, EventArgs e)
         {
-
             //Stopwatch.Stop();
             //Debug.WriteLine(1F / ((float)Stopwatch.ElapsedTicks / Stopwatch.Frequency));
             //Stopwatch.Restart();
-            UpdatableList.ForEach(a => a.Update(KeyboardDic));
+            UpdatableList.ForEach(a => a.Update());
         }
         public void Draw(object t, EventArgs e)
         {
@@ -77,7 +78,10 @@ namespace UnlimitedFunSnake
         }
         public void Keyboard(object t, KeyEventArgs e)
         {
-            KeyboardList.ForEach(a => a.Keyboard(e));
+            var list = new List<Keys>(){Keys.Up, Keys.Down, Keys.Right, Keys.Left};
+
+            if (list.Contains(e.KeyCode))
+                KeyboardList.ForEach(a => a.Keyboard(e.KeyCode));
         }
         public void DictionaryUp(object t, KeyEventArgs e)
         {

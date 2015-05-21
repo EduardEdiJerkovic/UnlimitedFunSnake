@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace UnlimitedFunSnake
 {
-    public class SnakeTailPart :IUpdatable, IDrawable
+    public class SnakeTailPart : IDrawable
     {
         public PointF Coordinates;
         public float Rotacion;
@@ -21,11 +21,6 @@ namespace UnlimitedFunSnake
         public void Keyboard(PointF coords)
         {
             Coordinates = coords;
-        }
-
-        public void Update(Dictionary<Keys, bool> keys)
-        {
-
         }
 
         public void Draw(Graphics gfx)

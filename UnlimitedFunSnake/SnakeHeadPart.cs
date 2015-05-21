@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace UnlimitedFunSnake
 {
-    public class SnakeHeadPart :IUpdatable, IDrawable
+    public class SnakeHeadPart :IDrawable
     {
         public PointF Coordinates;
         public float Rotacion;
@@ -18,13 +18,14 @@ namespace UnlimitedFunSnake
             this.Coordinates.Y = y;
             this.Rotacion = rot;
         }
-        public PointF Keyboard(KeyEventArgs e)
+        public PointF Keyboard(Keys e)
         {
             PointF coor = this.Coordinates;
-            switch (e.KeyCode)
+            switch (e)
             {
                 case Keys.Up:
-                    Coordinates.Y -= 16;
+                   // if(!CheckCollisions('y', -16))
+                        Coordinates.Y -= 16;
                     return coor;
                 case Keys.Down:
                     Coordinates.Y += 16;
@@ -40,13 +41,35 @@ namespace UnlimitedFunSnake
                     coor.Y = -100;
                     return coor;
                     
-            }
-            
-        }
+            }         
+        }       
+        //public bool CheckCollisions(char axis, int pixels)
+        //{
+        //    switch(axis)
+        //    {
+        //        case 'x':
+        //            if (0 > Coordinates.X + pixels || Coordinates.X + pixels > 800)
+        //            {
+        //                DestroyBody();
+        //                return true;
+        //            }
+        //            break;
+        //        case 'y':
+        //            if (0 > Coordinates.Y + pixels || Coordinates.Y > 496)
+        //            {
+        //                DestroyBody();
+        //                return true;
+        //            }
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //    return false;
+        //}
 
-        public void Update(Dictionary<Keys, bool> keys)
+        public void DestroyBody()
         {
-            
+
         }
 
         public void Draw(Graphics gfx)

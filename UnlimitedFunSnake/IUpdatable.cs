@@ -9,6 +9,6 @@ namespace UnlimitedFunSnake
 {
     public interface IUpdatable
     {
-        void Update(Dictionary<Keys, bool> keys);
+        void Update();
     }
 }

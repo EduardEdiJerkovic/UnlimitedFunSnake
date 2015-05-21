@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace UnlimitedFunSnake
 {
-    public class SnakePart :IDrawable, IUpdatable
+    public class SnakePart : IDrawable
     {
         public PointF Coordinates;
         public SnakePart (float x, float y)
@@ -20,26 +20,5 @@ namespace UnlimitedFunSnake
         {
             gfx.DrawImage(Image.FromFile("snakePart.png"), this.Coordinates);
         }
-        public void Update(Dictionary<Keys, bool> keys)
-        {
-
-        }
-        //public void Keyboard(KeyEventArgs e)
-        //{
-        //    switch (e.KeyCode)
-        //    {
-        //        case Keys.Up:
-        //            //Coordinates.X = 
-        //            break;
-        //        case Keys.Down:
-        //            break;
-        //        case Keys.Left:
-        //            break;
-        //        case Keys.Right:
-        //            break;
-        //        default:
-        //            break;
-        //    }
-        //}
     }
 }

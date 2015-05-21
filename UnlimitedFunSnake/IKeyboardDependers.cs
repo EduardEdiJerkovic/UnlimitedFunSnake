@@ -9,6 +9,6 @@ namespace UnlimitedFunSnake
 {
     public interface IKeyboardDependers
     {
-        void Keyboard(KeyEventArgs e);
+        void Keyboard(Keys e);
     }
 }
