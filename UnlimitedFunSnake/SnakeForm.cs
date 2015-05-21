@@ -63,6 +63,7 @@ namespace UnlimitedFunSnake
         }
         public void Update(object t, EventArgs e)
         {
+
             //Stopwatch.Stop();
             //Debug.WriteLine(1F / ((float)Stopwatch.ElapsedTicks / Stopwatch.Frequency));
             //Stopwatch.Restart();
