@@ -1,0 +1,9 @@
+c:\users\eduard-edi\documents\visual studio 2013\Projects\UnlimitedFunSnake\UnlimitedFunSnake\bin\Debug\UnlimitedFunSnake.exe.config
+c:\users\eduard-edi\documents\visual studio 2013\Projects\UnlimitedFunSnake\UnlimitedFunSnake\bin\Debug\UnlimitedFunSnake.exe
+c:\users\eduard-edi\documents\visual studio 2013\Projects\UnlimitedFunSnake\UnlimitedFunSnake\bin\Debug\UnlimitedFunSnake.pdb
+c:\users\eduard-edi\documents\visual studio 2013\Projects\UnlimitedFunSnake\UnlimitedFunSnake\obj\Debug\UnlimitedFunSnake.csprojResolveAssemblyReference.cache
+c:\users\eduard-edi\documents\visual studio 2013\Projects\UnlimitedFunSnake\UnlimitedFunSnake\obj\Debug\UnlimitedFunSnake.SnakeForm.resources
+c:\users\eduard-edi\documents\visual studio 2013\Projects\UnlimitedFunSnake\UnlimitedFunSnake\obj\Debug\UnlimitedFunSnake.Properties.Resources.resources
+c:\users\eduard-edi\documents\visual studio 2013\Projects\UnlimitedFunSnake\UnlimitedFunSnake\obj\Debug\UnlimitedFunSnake.csproj.GenerateResource.Cache
+c:\users\eduard-edi\documents\visual studio 2013\Projects\UnlimitedFunSnake\UnlimitedFunSnake\obj\Debug\UnlimitedFunSnake.exe
+c:\users\eduard-edi\documents\visual studio 2013\Projects\UnlimitedFunSnake\UnlimitedFunSnake\obj\Debug\UnlimitedFunSnake.pdb
