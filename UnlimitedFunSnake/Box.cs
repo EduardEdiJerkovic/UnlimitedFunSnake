@@ -23,7 +23,7 @@ namespace UnlimitedFunSnake
 
         public void Draw(Graphics gfx)
         {
-            gfx.DrawImage(Image.FromFile("box.png"), this.Coordinates);
+            gfx.DrawImage(Images.LoadImage("box.png"), this.Coordinates);
         }
     }
 }

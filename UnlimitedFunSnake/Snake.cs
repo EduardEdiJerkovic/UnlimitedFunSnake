@@ -28,12 +28,12 @@ namespace UnlimitedFunSnake
             LastMovment = Keys.Right;
             Direction = new Queue<Keys>();
 
-            Tail = new SnakeTailPart(100, 100, 0);          
+            Tail = new SnakeTailPart(96, 96, 0);          
             for (i = 1; i < lgth - 1; ++i)
             {
-                this.SnakeParts.Enqueue( new SnakePart(100+(16*i), 100));
+                this.SnakeParts.Enqueue( new SnakePart(96+(16*i), 96));
             }
-            Head = new SnakeHeadPart(100 + (16 * i), 100, 0);
+            Head = new SnakeHeadPart(96 + (16 * i), 96, 0);
         }
         public void Draw(Graphics gfx)
         {

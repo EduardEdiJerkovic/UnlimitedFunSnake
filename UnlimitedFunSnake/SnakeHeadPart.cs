@@ -74,7 +74,10 @@ namespace UnlimitedFunSnake
 
         public void Draw(Graphics gfx)
         {
-            gfx.DrawImage(Image.FromFile("snakeHeadTailPart.png"), this.Coordinates);
+            //gfx.tra
+            //gfx.RotateTransform((float)Math.PI / 2);
+            gfx.DrawImage(Images.LoadImage("snakeHeadTailPart.png"), this.Coordinates);
+            //gfx.ResetTransform();
         }
 
     }

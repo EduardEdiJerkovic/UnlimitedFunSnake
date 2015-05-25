@@ -20,12 +20,17 @@ namespace UnlimitedFunSnake
 
         public void Draw(Graphics gfx)
         {
-            gfx.DrawImage(Image.FromFile("Rebbit.png"), this.Coordinates);
+            gfx.DrawImage(Images.LoadImage("Rebbit.png"), this.Coordinates);
         }
 
         public void Update()
         {
             
+        }
+
+        public PointF GetCordinates()
+        {
+            return this.Coordinates;
         }
     }
 }

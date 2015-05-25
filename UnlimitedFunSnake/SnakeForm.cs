@@ -28,10 +28,13 @@ namespace UnlimitedFunSnake
             var bmp = new Bitmap(800, 496);
             snakePictureBox.Image = bmp;
             Gfx = Graphics.FromImage(bmp);
+            //Gfx.DrawImage();
+
             UpdatableList = new List<IUpdatable>();
             DrawableList = new List<IDrawable>();
             KeyboardList = new List<IKeyboardDependers>();
             KeyboardDic = new Dictionary<Keys, bool>();
+
             TmpPressedKey = Keys.Right;
 
             //Gfx.FillRectangle(new SolidBrush(Color.Red), 100, 100, 100, 100);
@@ -45,6 +48,10 @@ namespace UnlimitedFunSnake
             KeyboardDic.Add(Keys.Down, false);
             KeyboardDic.Add(Keys.Left, false);
             KeyboardDic.Add(Keys.Right, false);
+
+            var background = new Background(800, 496);
+            DrawableList.Add(background);
+
 
             var box = new Box(10, 10);
             UpdatableList.Add(box);

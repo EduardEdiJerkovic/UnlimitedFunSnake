@@ -25,7 +25,7 @@ namespace UnlimitedFunSnake
 
         public void Draw(Graphics gfx)
         {
-            gfx.DrawImage(Image.FromFile("snakeHeadTailPart.png"), this.Coordinates);
+            gfx.DrawImage(Images.LoadImage("snakeHeadTailPart.png"), this.Coordinates);
         }
 
     }
